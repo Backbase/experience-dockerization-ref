@@ -1,0 +1,28 @@
+{
+  "name": "container-bb-manageable-area-_-xiocrf",
+  "properties": {
+    "title": "Manageable Area",
+    "autoExtend": true
+  },
+  "children": [
+    {
+      "name": "bb-example-ang-_-hwkve",
+      "properties": {
+        "title": "Example Angular App Container",
+        "render.requires": "render-bb-ssr",
+        "render.strategy": "render-bb-widget-3",
+        "versionOfDependencies": "{\"foundation-ang\":\"6.10.0\"}"
+      },
+      "children": [
+        {
+          "name": "bb-dummy-sample-ang-_-9nhns",
+          "properties": {
+            "classId": "DummySampleComponent",
+            "title": "DummySample Widget",
+            "render.requires": "render-bb-widget-3"
+          }
+        }
+      ]
+    }
+  ]
+}
