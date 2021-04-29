@@ -1,0 +1,101 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <script>
+    var BB = {
+      config: {
+        linkRoot: '/',
+        locales: 'en-US',
+        version: '6',
+        apiRoot: '${PATHNAME}api',
+        staticResourcesRoot: '${PATHNAME}',
+        portalName: '',
+        pageName: 'page-bb-default',
+        designmode: 'false',
+        currentLink: 'page-bb-default',
+        locale: 'en-US',
+        userId: 'admin',
+        _content: {
+          repositories: [
+            {
+              isPortal: true,
+              name: 'portalRepository',
+              id: 'portalRepository'
+            },
+            {
+              isPortal: false,
+              name: 'contentRepository',
+              id: 'contentRepository'
+            },
+          ]
+        },
+        cx: Object.assign({
+          kind: "hybrid",
+          scope: "${AUTH_SCOPE}",
+          authUrl: "${AUTH_URL}",
+          realm: "${AUTH_REALM}",
+          clientId: "${AUTH_CLIENT_ID}",
+          landingPageUrl: '${PROTOCOL}//${HOSTNAME}${PATHNAME}${AUTH_LANDING_PAGE}',
+          loginPageUrl: '${PROTOCOL}//${HOSTNAME}${PATHNAME}${AUTH_REDIRECT_PAGE}'
+        },
+          { entitlements: {
+  "enable": false,
+  "uri": "/accessgroup-presentation-service/client-api/v2/accessgroups/users/permissions/summary"
+} },
+        )
+      },
+      pageModel: {
+  "name": "page-bb-default",
+  "properties": {},
+  "children": [
+    {
+      "name": "container-bb-manageable-area-_-9fsvw",
+      "properties": {
+        "title": "Manageable Area",
+        "autoExtend": true
+      },
+      "children": []
+    }
+  ]
+}
+    };
+    if (BB.config.staticResourcesRoot.slice(-1) !== '/') {
+      console.error('PATHNAME must end with closing slash /!')
+    }
+    BB.config.staticResourcesRoot = BB.config.staticResourcesRoot.slice(0, -1);
+  </script>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    if (/Trident.*rv[ :]*11\./.test(navigator.userAgent)) { // IE 11
+      document.write('<script src="${PATHNAME}ext-bb-page-default/scripts/polyfills.js"><' + '/script>');
+    }
+  </script>
+  <title>Home</title>
+  <meta name="locale" content="en-US">
+
+  <link rel="icon" type="image/x-icon" href="${PATHNAME}page-bb-default/assets/favicon.ico">
+</head>
+
+<body>
+  <div class="">
+    <div class="" data-area="0" data-portal-page="page">
+      <div data-chrome="page-bb-default">
+
+<div data-chrome="container-bb-manageable-area-_-9fsvw">
+</div></div>
+    </div>
+  </div>
+
+  <script src="${PATHNAME}lib-bb-page-bootstrap-cdn.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      window[["lib-bb-page-bootstrap-cdn"]].bootstrap(BB.config, BB.pageModel);
+    });
+  </script>
+
+</body>
+</html>

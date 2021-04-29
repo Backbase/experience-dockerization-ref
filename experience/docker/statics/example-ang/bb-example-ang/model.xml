@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <container>
+        <name>bb-example-ang</name>
+        <properties>
+            <property name="render.requires" type="string">
+                <value>render-bb-ssr</value>
+            </property>
+            <property name="render.strategy" type="string">
+                <value>render-bb-widget-3</value>
+            </property>
+            <property name="src" type="string">
+                <value>$(itemRoot)/index.hbs</value>
+            </property>
+            <property name="title" type="string" readonly="true" label="Title" viewHint="admin,designModeOnly">
+                <value>Example Angular App Container</value>
+            </property>
+            <property name="label" type="string">
+                <value>Example Angular App Container</value>
+            </property>
+            <property name="versionOfDependencies" type="string" readonly="true">
+                <value>{"foundation-ang":"6.10.0"}</value>
+            </property>
+            <property name="thumbnailUrl" type="string">
+                <value>$(itemRoot)/icon.png</value>
+            </property>
+        </properties>
+    </container>
+</catalog>

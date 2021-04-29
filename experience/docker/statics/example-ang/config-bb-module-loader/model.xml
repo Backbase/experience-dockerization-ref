@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <feature>
+        <name>config-bb-module-loader</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="version" label="Version" readonly="true" viewHint="designModeOnly">
+                <value type="string">1.2.7</value>
+            </property>
+            <property name="title" label="Title" readonly="true" viewHint="admin,designModeOnly">
+                <value type="string">config-bb-module-loader</value>
+            </property>
+            <property name="path" label="Path" readonly="true" viewHint="designModeOnly">
+                <value type="string">$(itemRoot)/scripts/config-bb-module-loader.js</value>
+            </property>
+        </properties>
+    </feature>
+</catalog>

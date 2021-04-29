@@ -1,0 +1,35 @@
+{
+  "_args": [
+    [
+      "vendor-bb-systemjs@0.19.38",
+      "/home/jenkins/agent/workspace/Shared/FBB/lean-client/master/web-sdk"
+    ]
+  ],
+  "_from": "vendor-bb-systemjs@0.19.38",
+  "_id": "vendor-bb-systemjs@0.19.38",
+  "_inBundle": false,
+  "_integrity": "sha1-dD1IiLzCa2VvmXlDz43co1uTHTE=",
+  "_location": "/vendor-bb-systemjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "vendor-bb-systemjs@0.19.38",
+    "name": "vendor-bb-systemjs",
+    "escapedName": "vendor-bb-systemjs",
+    "rawSpec": "0.19.38",
+    "saveSpec": null,
+    "fetchSpec": "0.19.38"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://artifacts.backbase.com/api/npm/npm-backbase/vendor-bb-systemjs/-/vendor-bb-systemjs-0.19.38.tgz",
+  "_spec": "0.19.38",
+  "_where": "/home/jenkins/agent/workspace/Shared/FBB/lean-client/master/web-sdk",
+  "description": "Universal dynamic module loader - loads ES6 modules, AMD, CommonJS and global scripts in the browser and NodeJS.",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "scripts/vendor-bb-systemjs.js",
+  "name": "vendor-bb-systemjs",
+  "version": "0.19.38"
+}
