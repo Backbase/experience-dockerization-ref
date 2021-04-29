@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "name": "@example/dummy-sample-widget-ang",
+  "version": "1.0.0",
+  "description": "Dummy Sample Widget",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@backbase/foundation-ang": "^6.0.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "dest": "../../dist/libs/dummy-sample-widget-ang"
+  }
+}
