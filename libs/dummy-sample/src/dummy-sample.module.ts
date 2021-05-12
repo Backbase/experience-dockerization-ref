@@ -8,8 +8,8 @@ import { DummySampleComponent } from './dummy-sample.component';
   imports: [
     CommonModule,
     BackbaseCoreModule.withConfig({
-      classMap: { DummySampleComponent }
-    })
-  ]
+      classMap: { DummySampleComponent },
+    }),
+  ],
 })
-export class DummySampleModule { }
+export class DummySampleModule {}

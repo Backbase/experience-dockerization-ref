@@ -15,7 +15,7 @@ const start = registerSingleApp((extraProviders: Array<StaticProvider>) =>
 
 if (environment.bootstrap) {
   const { services, pageModel } = environment.bootstrap;
-  start(services).then(app => {
+  start(services).then((app) => {
     app.bootstrap(pageModel, { parentName: '', index: 0 });
   });
 }

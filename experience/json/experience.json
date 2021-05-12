@@ -34,7 +34,7 @@
       },
       "provisioning": {
         "type": "cx",
-        "outputDir": "./experience/zoz-output",
+        "outputDir": "./experience/provisioning-package-output",
         "staticResourcesRoot": "/gateway/api/portal/static/items",
         "linkRoot": "/gateway",
         "groups": {

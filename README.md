@@ -15,16 +15,16 @@ Before running commands locally the WEB-SDK collection needs to be provided in t
 Backbase applications are rendered dynamically based on the model stored in Backbase CX. Application manager (or its older version - Experience manager) can work with it through a portal server.
 
 There are 2 formats of the experience:
-- zoz (zip of zips)
+- provisioning package
 - json
 
-### ZOZ
+### Provisioning package
 
-This is our legacy format for the experience model. It can be easily understood by the name, that this is a binary zip archive, that consists of several other archives. The end format of the data itself is `xml`.
+This is our legacy format for the experience model. This is a binary zip archive, that consists of several other archives. The end format of the data itself is `xml`.
 
 It is needed to export it from one of the managers' applications if you want to store it somewhere or to convert it to a more convenient JSON format.
 
-The example of the ZOZ experience for this project exported from the experience manager can be found in the `experience/zoz` folder, which is named `example.zip`.
+The example of the provisioning package for this project exported from the experience manager can be found in the `experience/provisioning-package` folder, which is named `example.zip`.
 
 ### JSON
 
@@ -41,13 +41,13 @@ There is a command line utility, that will help getting the model in the JSON fo
 
 Please, check the npm scripts section in the `package.json` file in the current reference project to see the example of using the command. The example of the outputed files can be found in the `experience/json` folder. 
 
-If experience in ZOZ format is needed after working with JSON files, it can be easily created with the following command:
+If experience in provisioning package format is needed after working with JSON files, it can be easily created with the following command:
 
 ```
-  npm run create:zoz:experience
+  npm run create:provisioning-package:experience
 ```
 
-The output can be found in `./experience/zoz-output` (the output localtion can be changed in the `experince.json`, check the `provisioning.default.outputDir` property). There will be 2 files - `cx.zip` and `portal.zip`, which represented the experience catalog needed for rendering and the experience itself.
+The output can be found in `./experience/provisioning-package-output` (the output localtion can be changed in the `experince.json`, check the `provisioning.default.outputDir` property). There will be 2 files - `cx.zip` and `portal.zip`, which represented the experience catalog needed for rendering and the experience itself.
 
 ### Local development note
 
