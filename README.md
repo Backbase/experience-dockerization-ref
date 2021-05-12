@@ -121,6 +121,8 @@ Notes:
   npm run create:docker:container
 ```
 
+The result can be found in the `./experience/docker` folder, check the additionals to get the reasoning behind each file.
+
 3. Get it up and running
 
 In the `.experience/docker` folder:
