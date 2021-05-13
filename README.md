@@ -149,7 +149,7 @@ The result can be found in the `./experience/docker` folder, check the additiona
 
 3. Get it up and running
 
-In the `.experience/docker` folder:
+In the `./experience/docker` folder:
 
 ```
 docker build --tag <APP_NAME>:<APP_VERSION> .
