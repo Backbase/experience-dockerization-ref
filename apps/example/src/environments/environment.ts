@@ -3,7 +3,7 @@ import { createMocksInterceptor } from '@backbase/foundation-ang/data-http';
 import { Container } from '@backbase/foundation-ang/web-sdk';
 import { ExternalServices } from '@backbase/foundation-ang/start';
 
-import * as pageModelMock from '../mocks/home.simplified.json';
+import * as pageModelMock from '../mocks/home.page.mock.json';
 
 const services: ExternalServices = {};
 

@@ -49,22 +49,46 @@ If experience in provisioning package format is needed after working with JSON f
 
 The output can be found in `./experience/provisioning-package-output` (the output localtion can be changed in the `experince.json`, check the `provisioning.default.outputDir` property). There will be 2 files - `cx.zip` and `portal.zip`, which represented the experience catalog needed for rendering and the experience itself.
 
-### Local development note
+### Local development
 
-In Widget Architecture 3 (WA3), the Angular Single Page Application (SPA) is dynamically rendered based on the model stored in Backbase CX. The model that the SPA is receiving is what we call simplified model.
+#### General information
 
-Simplified model is a simplification of the Backbase Page Model that is returned by page API endpoints of portal server. Its structure is similar to model.xml widget object definition defined for every widget / container.
+Backabse Experience is multi-page application that consists of at least three pages - home, login and error one (often called something-went-wrong). In Widget Architecture 3 (WA3) for frontend applications, the Angular Single Page Application (SPA) is dynamically rendered based on the model stored in Backbase CX. The model that the SPA is receiving is what we call simplified model for home page.
 
-To create the simplified model for home page you can run the following command:
+Simplified model is a simplification of the Backbase Page Model that is returned by page API endpoints of portal server. Its structure is similar to model.xml widget object definition defined for every widget / container. To enable local development you can extract home page (its simplified model) and continue to work as with regular angular application.
+
+Follow next steps:
+
+1. Create the simplified model for home page
+
+For the current reference project just run:
 
 ```
-  npm run create:simplified:home
+  npm run create:home:page:mock
 ```
 
-!important
-In case you want to reproduce it in your project pay attention to the `environment.ts` file.
+The output result can be found `./apps/example/mocks/home.page.mock.json`.
 
-The output result can be found `./apps/example/mocks/home.simplified.json`. You can run the application as a simpl angular one:
+2. Update `environment.ts` to include page model into bootstraping
+
+```
+export const environment = {
+  production: false,
+  mockProviders: [createMocksInterceptor()],
+  bootstrap: {
+    pageModel: (pageModelMock as Container).children[0],
+    services,
+  },
+}
+```
+
+Additional notes:
+- Type casting is needed to bring some clear structure to the imported mock file.
+- The pageModel is wrapped into a manageable area container in the provisioning package.
+  It is used only in the application/experience managers to bring some manageability rules.
+  It is completely redundant in the local development.
+
+3. Serve application localy as regular angular one
 
 ```
   ng serve

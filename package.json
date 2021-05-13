@@ -19,7 +19,7 @@
     "create:json:experience": "sdlc extract ./experience/provisioning-package/example.zip ./experience/json",
     "create:docker:container": "sdlc package ./experience/json/experience.json --environment=docker",
     "create:provisioning-package:experience": "sdlc package ./experience/json/experience.json",
-    "create:simplified:home": "sdlc convert-from ./experience/json/experience.json ./experience/json/pages/home.json --output=./apps/example/src/mocks/home.simplified.json --remove-defaults=false"
+    "create:home:page:mock": "sdlc convert-from ./experience/json/experience.json ./experience/json/pages/home.json --output=./apps/example/src/mocks/home.page.mock.json --remove-defaults=false"
   },
   "private": true,
   "dependencies": {
