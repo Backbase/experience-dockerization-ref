@@ -4,6 +4,8 @@
 /dist
 /tmp
 /out-tsc
+/experience/docker
+/experience/provisioning-package-output
 
 # dependencies
 /node_modules
