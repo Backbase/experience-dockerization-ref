@@ -44,7 +44,7 @@ Please, check the npm scripts section in the `package.json` file in the current 
 If experience in provisioning package format is needed after working with JSON files, it can be easily created with the following command:
 
 ```
-  npm run create:provisioning-package:experience
+  npm run create:provisioning-package
 ```
 
 The output can be found in `./experience/provisioning-package-output` (the output localtion can be changed in the `experience.json`, check the `provisioning.default.outputDir` property). There will be 2 files - `cx.zip` and `portal.zip`, which represented the experience catalog needed for rendering and the experience itself.
