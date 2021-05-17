@@ -1,4 +1,3 @@
-import { DummySampleModule } from '@@example/dummy-sample';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -10,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
+import { bundlesDefinition } from './bundle-definitions';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,10 +18,11 @@ import { AppComponent } from './app.component';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     HttpClientModule,
-    BackbaseCoreModule,
     RouterModule.forRoot([], { initialNavigation: 'disabled', useHash: false }),
     WebSdkModule.forRoot({ ...environment, staticResourcesRoot: '' }),
-    DummySampleModule,
+    BackbaseCoreModule.forRoot({
+      lazyModules: bundlesDefinition,
+    }),
   ],
   providers: [...(environment.mockProviders || []), { provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent],
