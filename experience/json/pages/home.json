@@ -6,7 +6,7 @@
       "area": "0",
       "children": [
         {
-          "classId": "DummySampleComponent"
+          "classId": "SampleJourneyBundleModule"
         }
       ]
     }

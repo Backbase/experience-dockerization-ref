@@ -15,7 +15,8 @@
   "cxSources": [
     "node_modules/@backbase",
     "dist/provisioning-packages/cx6/example.zip",
-    "collections/collection-bb-web-sdk-1.15.2.zip"
+    "collections/collection-bb-web-sdk-1.15.4.zip",
+    "./models"
   ],
   "contentDirs": {
     "default": "experience/json/content",
@@ -75,23 +76,6 @@
             "ROLE_group_user": "CONSUMER"
           }
         }
-      }
-    },
-    "docker": {
-      "provisioning": {
-        "type": "nginx",
-        "outputDir": "./experience/docker",
-        "baseHref": "http://localhost:8080/example-ang",
-        "apiRoot": "https://localhost/api"
-      },
-      "authorization": {
-        "kind": "hybrid",
-        "authUrl": "https://localhost/auth",
-        "clientId": "bb-web-client",
-        "realm": "backbase",
-        "scope": "openid",
-        "landingPageUrl": "select-context",
-        "loginPageUrl": "redirect"
       }
     }
   },
