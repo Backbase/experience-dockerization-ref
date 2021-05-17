@@ -47,7 +47,7 @@ If experience in provisioning package format is needed after working with JSON f
   npm run create:provisioning-package:experience
 ```
 
-The output can be found in `./experience/provisioning-package-output` (the output localtion can be changed in the `experince.json`, check the `provisioning.default.outputDir` property). There will be 2 files - `cx.zip` and `portal.zip`, which represented the experience catalog needed for rendering and the experience itself.
+The output can be found in `./experience/provisioning-package-output` (the output localtion can be changed in the `experience.json`, check the `provisioning.default.outputDir` property). There will be 2 files - `cx.zip` and `portal.zip`, which represented the experience catalog needed for rendering and the experience itself.
 
 ### Local development
 
