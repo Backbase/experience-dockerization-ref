@@ -27,6 +27,10 @@
       "@@example/*": [
         "libs/*/public_api.ts",
         "node_modules/@@example/*"
+      ],
+      "@backbase/*": [
+        "libs/*/public_api.ts",
+        "node_modules/@backbase/*"
       ]
     },
     "resolveJsonModule": true

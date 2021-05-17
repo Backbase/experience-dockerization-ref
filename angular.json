@@ -169,16 +169,16 @@
         }
       }
     },
-    "dummy-sample": {
+    "sample-journey": {
       "projectType": "library",
-      "root": "libs/dummy-sample",
-      "sourceRoot": "libs/dummy-sample/src",
+      "root": "libs/sample-journey",
+      "sourceRoot": "libs/sample-journey/src",
       "prefix": "bb",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/dummy-sample/test.ts",
+            "main": "libs/sample-journey/test.ts",
             "karmaConfig": "./karma.conf.js",
             "polyfills": "apps/example/src/polyfills.ts",
             "tsConfig": "./tsconfig.spec.json",
@@ -193,7 +193,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "files": [
-              "libs/dummy-sample/**/*.ts"
+              "libs/sample-journey/**/*.ts"
             ],
             "exclude": [
               "**/node_modules/**"
