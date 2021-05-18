@@ -1,0 +1,14 @@
+{
+  "extends": "container-bb-manageable-area",
+  "children": [
+    {
+      "extends": "bb-example-ang",
+      "area": "0",
+      "children": [
+        {
+          "classId": "SampleJourneyBundleModule"
+        }
+      ]
+    }
+  ]
+}

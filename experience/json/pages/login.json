@@ -1,0 +1,9 @@
+{
+  "extends": "container-bb-manageable-area",
+  "children": [
+    {
+      "extends": "widget-bb-portal-login",
+      "area": "0"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "$schema": "../../node_modules/@backbase/sdlc-convert/node_modules/@backbase/sdlc-schema/experience.schema.json",
+  "name": "example",
+  "title": "example",
+  "locales": [
+    "en-US"
+  ],
+  "properties": {
+    "AccessDeniedPage": "example/login?error=accessdenied",
+    "DefaultLandingPage": "example/index",
+    "ErrorPage": "example/error",
+    "LoginPage": "example/login",
+    "TypeOfTags": "tracking"
+  },
+  "cxSources": [
+    "node_modules/@backbase",
+    "dist/provisioning-packages/cx6/example.zip",
+    "collections/collection-bb-web-sdk-1.15.4.zip",
+    "./models"
+  ],
+  "contentDirs": {
+    "default": "experience/json/content",
+    "shared": "shared"
+  },
+  "environments": {
+    "default": {
+      "authorization": {
+        "kind": "bas",
+        "landingPageUrl": "example/index",
+        "loginPageUrl": "example/login"
+      },
+      "entitlements": {
+        "enable": false,
+        "uri": "/accessgroup-presentation-service/client-api/v2/accessgroups/users/permissions/summary"
+      },
+      "provisioning": {
+        "type": "cx",
+        "outputDir": "./experience/provisioning-package-output",
+        "staticResourcesRoot": "/gateway/api/portal/static/items",
+        "linkRoot": "/gateway",
+        "groups": {
+          "user": {
+            "role": "USER"
+          },
+          "master page designer": {
+            "role": "MANAGER"
+          },
+          "manager": {
+            "role": "MANAGER"
+          },
+          "approvers": {
+            "role": "MANAGER"
+          },
+          "admin": {
+            "role": "ADMIN",
+            "description": "Admin Group"
+          }
+        },
+        "permissions": {
+          "anonymousConsumer": {
+            "ROLE_ANONYMOUS": "CONSUMER",
+            "ROLE_group_admin": "ADMIN",
+            "ROLE_group_user": "CONSUMER"
+          },
+          "permission-55711089d5": {
+            "ROLE_ANONYMOUS": "CONSUMER",
+            "ROLE_group_admin": "ADMIN",
+            "ROLE_group_manager": "ADMIN",
+            "ROLE_group_master page designer": "ADMIN",
+            "ROLE_group_user": "CONSUMER"
+          },
+          "permission-f4b671fe33": {
+            "ROLE_group_admin": "ADMIN",
+            "ROLE_group_manager": "CONSUMER",
+            "ROLE_group_master page designer": "ADMIN",
+            "ROLE_group_user": "CONSUMER"
+          }
+        }
+      }
+    }
+  },
+  "menus": {
+    "master-pages": [
+      {
+        "type": "page",
+        "section": "page-bb-default",
+        "title": "Lean Page",
+        "page": {
+          "extends": "page-bb-default",
+          "name": "page-bb-default",
+          "title": "Page Bb Default",
+          "children": [
+            {
+              "fragment": "./pages/lean-page.json"
+            }
+          ]
+        }
+      }
+    ],
+    "special-pages": [
+      {
+        "type": "page",
+        "section": "login",
+        "title": "Login",
+        "permission": "permission-55711089d5",
+        "page": {
+          "extends": "page-bb-default",
+          "name": "login",
+          "title": "Login",
+          "children": [
+            {
+              "fragment": "./pages/login.json"
+            }
+          ]
+        }
+      },
+      {
+        "type": "page",
+        "section": "error",
+        "title": "Error",
+        "permission": "permission-55711089d5",
+        "page": {
+          "extends": "page-bb-default",
+          "name": "error",
+          "title": "Something went wrong",
+          "children": [
+            {
+              "fragment": "./pages/something-went-wrong.json"
+            }
+          ]
+        }
+      }
+    ],
+    "main": [
+      {
+        "type": "page",
+        "section": "index",
+        "friendlyUrl": "example",
+        "title": "Home",
+        "page": {
+          "extends": "page-bb-default",
+          "name": "index",
+          "title": "Index",
+          "children": [
+            {
+              "fragment": "./pages/home.json"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
