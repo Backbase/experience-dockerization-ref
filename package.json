@@ -45,7 +45,7 @@
     "@angular/cli": "~11.1.0",
     "@angular/compiler-cli": "~11.1.0",
     "@angular/language-service": "~11.1.0",
-    "@backbase/sdlc-convert": "^0.13.16",
+    "@bb-cli/bb": "^3.0.2",
     "@bb-cli/bb-ang": "~5.0.0-rc.0",
     "@bb-cli/schematics": "5.0.1",
     "@microsoft/api-extractor": "7.12.1",
