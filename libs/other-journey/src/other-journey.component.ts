@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'bb-other-journey',
   template: `
     <p>
-      other-journey works works!
+      other-journey works!
     </p>
   `,
 })
