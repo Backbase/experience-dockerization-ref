@@ -1,5 +1,5 @@
 {
-  "$schema": "../../node_modules/@backbase/sdlc-convert/node_modules/@backbase/sdlc-schema/experience.schema.json",
+  "$schema": "../../node_modules/@bb-cli/bb/node_modules/@backbase/sdlc-schema/experience.schema.json",
   "name": "example",
   "title": "example",
   "locales": [
@@ -15,7 +15,7 @@
   "cxSources": [
     "node_modules/@backbase",
     "dist/provisioning-packages/cx6/example.zip",
-    "collections/collection-bb-web-sdk-1.15.4.zip",
+    "collections/collection-bb-web-sdk-1.15.2.zip",
     "./models"
   ],
   "contentDirs": {
@@ -76,6 +76,23 @@
             "ROLE_group_user": "CONSUMER"
           }
         }
+      }
+    },
+    "docker": {
+      "provisioning": {
+        "type": "nginx",
+        "outputDir": "./experience/docker",
+        "baseHref": "http://localhost:8080/example-app",
+        "apiRoot": "https://localhost/api"
+      },
+      "authorization": {
+        "kind": "hybrid",
+        "authUrl": "https://localhost/auth",
+        "clientId": "bb-web-client",
+        "realm": "backbase",
+        "scope": "openid",
+        "landingPageUrl": "select-context",
+        "loginPageUrl": "redirect"
       }
     }
   },
