@@ -15,7 +15,7 @@
   "cxSources": [
     "node_modules/@backbase",
     "dist/provisioning-packages/cx6/example.zip",
-    "collections/collection-bb-web-sdk-1.15.2.zip",
+    "collections/collection-bb-web-sdk-1.15.4.zip",
     "./models"
   ],
   "contentDirs": {
