@@ -1,12 +1,12 @@
 {
-  "name": "container-bb-manageable-area-_-ufvem4",
+  "name": "container-bb-manageable-area-_-jlt24i",
   "properties": {
     "title": "Manageable Area",
     "autoExtend": true
   },
   "children": [
     {
-      "name": "bb-example-ang-_-m9i29",
+      "name": "bb-example-ang-_-viw8wm",
       "properties": {
         "title": "Example Angular App Container",
         "render.requires": "render-bb-ssr",
@@ -15,10 +15,10 @@
       },
       "children": [
         {
-          "name": "bb-dummy-sample-ang-_-szkxk",
+          "name": "bb-sample-journey-bundle-ang-_-pz292h",
           "properties": {
-            "classId": "DummySampleComponent",
-            "title": "DummySample Widget",
+            "classId": "SampleJourneyBundleModule",
+            "title": "Sample Journey Bundle",
             "render.requires": "render-bb-widget-3"
           }
         }
