@@ -1,0 +1,21 @@
+{
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "name": "@backbase/other-journey",
+  "version": "1.0.0",
+  "description": "Other Journey",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.1.0",
+    "@angular/core": "^10.1.0",
+    "@angular/router": "^10.1.0",
+    "@backbase/foundation-ang": "^6.8.2"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "dest": "../../dist/libs/other-journey"
+  }
+}
