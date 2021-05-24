@@ -16,10 +16,10 @@
     "start": "ng serve",
     "test": "ng test",
     "update": "ng update @bb-cli/schematics@^5 @backbase/foundation-ang@^6",
-    "create:json:experience": "sdlc extract ./experience/provisioning-package/example.zip ./experience/json",
-    "create:docker:container": "sdlc package ./experience/json/experience.json --environment=docker",
-    "create:provisioning-package": "sdlc package ./experience/json/experience.json",
-    "create:home:page:mock": "sdlc convert-from ./experience/json/experience.json ./experience/json/pages/home.json --output=./apps/example/src/mocks/home.page.mock.json --remove-defaults=false"
+    "create:json:experience": "bb model cx-provisioning-package-to-json-model ./experience/provisioning-package/example.zip ./experience/json",
+    "create:provisioning-package": "bb model json-model-to-cx-provisioning-package ./experience/json/experience.json",
+    "create:home:page:mock": "bb model json-model-to-simplified-model ./experience/json/experience.json ./experience/json/pages/home.json --output=./apps/example/src/mocks/home.page.mock.json --remove-defaults=false",
+    "create:docker:container": "bb docker json-model-to-docker-container ./experience/json/experience.json --environment=docker"
   },
   "private": true,
   "dependencies": {
@@ -45,7 +45,7 @@
     "@angular/cli": "~11.1.0",
     "@angular/compiler-cli": "~11.1.0",
     "@angular/language-service": "~11.1.0",
-    "@backbase/sdlc-convert": "^0.13.16",
+    "@bb-cli/bb": "^3.0.2",
     "@bb-cli/bb-ang": "~5.0.0-rc.0",
     "@bb-cli/schematics": "5.0.1",
     "@microsoft/api-extractor": "7.12.1",

@@ -1,11 +1,5 @@
 # Dockerization and experience models reference project
 
-## todo:
-- remove @backbase/sdlc-convert from dependencies
-- install @bb-cli@3.0.0
-- update npm scripts
-- update the code snippets in the readme file
-
 !important
 
 Before running commands locally the WEB-SDK collection needs to be provided in the `./collections` folder.
@@ -152,13 +146,13 @@ The result can be found in the `./experience/docker` folder, check the additiona
 In the `./experience/docker` folder:
 
 ```
-docker build --tag <APP_NAME>:<APP_VERSION> .
+  docker build --tag <APP_NAME>:<APP_VERSION> .
 ```
 
 or to get iy up and running with docker-compose:
 
 ```
-docker-compose up -d --build
+  docker-compose up -d --build
 ```
 
 The application from the reference project can be found at `http://127.0.0.1:8080/example-ang/example` (redirect is posible due to router configuration).
@@ -175,7 +169,7 @@ The application from the reference project can be found at `http://127.0.0.1:808
 2. Docker environment field explanation
 
 Provisioning
-- type : This value must not be changed as it’s the type used to inform @backbase/sdlc-convert that you want to create a Docker container that makes use of NGINX.
+- type : This value must not be changed as it’s the type used to inform @bb-cli/bb that you want to create a Docker container that makes use of NGINX.
 - outputDir : This is the path to the directory where all the Docker assets will be stored on executing the packagecommand.
 - baseHref : This is the url path to your app when it gets served from statics. The port used on baseHref will become the open port on your Docker container
 - apiRoot : This is the url path to your Gateway. 

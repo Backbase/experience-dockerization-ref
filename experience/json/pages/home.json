@@ -1,5 +1,6 @@
 {
   "extends": "container-bb-manageable-area",
+  "area": "0",
   "children": [
     {
       "extends": "bb-example-ang",
