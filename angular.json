@@ -40,6 +40,8 @@
         "build": {
           "builder": "@bb-cli/bb-ang:browser",
           "options": {
+            "i18nMissingTranslation": "error",
+            "localize": true,
             "outputPath": "dist/example",
             "index": "apps/example/src/index.html",
             "main": "apps/example/src/main.ts",
@@ -93,6 +95,16 @@
                   "with": "apps/example/src/environments/environment.shared.ts"
                 }
               ]
+            },
+            "ar": {
+              "localize": [
+                "ar"
+              ]
+            },
+            "en": {
+              "localize": [
+                "en"
+              ]
             }
           }
         },
@@ -104,6 +116,14 @@
           "configurations": {
             "production": {
               "browserTarget": "example:build:production"
+            },
+            "en": {
+              "browserTarget": "example:build:en",
+              "port": 4200
+            },
+            "ar": {
+              "browserTarget": "example:build:ar",
+              "port": 4201
             }
           }
         },
@@ -138,6 +158,12 @@
               "**/node_modules/**"
             ]
           }
+        },
+      },
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "ar": "apps/example/src/locale/messages.ar.xlf"
         }
       }
     },
@@ -202,7 +228,7 @@
         }
       }
     }
-    },
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,

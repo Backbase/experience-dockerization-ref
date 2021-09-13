@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="c138dd11da211ca0773c622a3a5eaed3583af628" datatype="html">
+        <source> sample-journey works! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/sample-journey/src/sample-journey.component.ts</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+        <note priority="1" from="description">works</note>
+        <target state="translated"> تجربة-الجزء التجريبي يعمل! </target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
