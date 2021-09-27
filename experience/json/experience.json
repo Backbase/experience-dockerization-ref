@@ -3,11 +3,12 @@
   "name": "example",
   "title": "example",
   "locales": [
-    "en-US"
+    "en-US",
+    "ar"
   ],
   "properties": {
     "AccessDeniedPage": "example/login?error=accessdenied",
-    "DefaultLandingPage": "example/index",
+    "DefaultLandingPage": "example",
     "ErrorPage": "example/error",
     "LoginPage": "example/login",
     "TypeOfTags": "tracking"
@@ -82,17 +83,17 @@
       "provisioning": {
         "type": "nginx",
         "outputDir": "./experience/docker",
-        "baseHref": "http://localhost:8080/example-app",
-        "apiRoot": "https://localhost/api"
+        "baseHref": "http://localhost:4203/example-app",
+        "apiRoot": "https://edge.usa-latest.business.backbase.eu/api"
       },
       "authorization": {
         "kind": "hybrid",
-        "authUrl": "https://localhost/auth",
+        "authUrl": "https://identity.usa-latest.business.backbase.eu/auth",
         "clientId": "bb-web-client",
         "realm": "backbase",
         "scope": "openid",
-        "landingPageUrl": "select-context",
-        "loginPageUrl": "redirect"
+        "landingPageUrl": "example",
+        "loginPageUrl": "login"
       }
     }
   },
@@ -151,7 +152,7 @@
     "main": [
       {
         "type": "page",
-        "section": "index",
+        "section": "example",
         "friendlyUrl": "example",
         "title": "Home",
         "page": {

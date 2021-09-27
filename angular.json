@@ -40,6 +40,8 @@
         "build": {
           "builder": "@bb-cli/bb-ang:browser",
           "options": {
+            "localize": true,
+            "i18nMissingTranslation": "error",
             "outputPath": "dist/example",
             "index": "apps/example/src/index.html",
             "main": "apps/example/src/main.ts",
@@ -60,6 +62,7 @@
           },
           "configurations": {
             "production": {
+              "localize": true,
               "fileReplacements": [
                 {
                   "replace": "apps/example/src/environments/environment.ts",
@@ -87,11 +90,22 @@
               ]
             },
             "shared": {
+              "localize": true,
               "fileReplacements": [
                 {
                   "replace": "apps/example/src/environments/environment.ts",
                   "with": "apps/example/src/environments/environment.shared.ts"
                 }
+              ]
+            },
+            "ar": {
+              "localize": [
+                "ar"
+              ]
+            },
+            "en": {
+              "localize": [
+                "en"
               ]
             }
           }
@@ -104,6 +118,14 @@
           "configurations": {
             "production": {
               "browserTarget": "example:build:production"
+            },
+            "en": {
+              "browserTarget": "example:build:en",
+              "port": 4200
+            },
+            "ar": {
+              "browserTarget": "example:build:ar",
+              "port": 4201
             }
           }
         },
@@ -138,6 +160,12 @@
               "**/node_modules/**"
             ]
           }
+        },
+      },
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "ar": "apps/example/src/locale/messages.ar.xlf"
         }
       }
     },
@@ -202,7 +230,7 @@
         }
       }
     }
-    },
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,

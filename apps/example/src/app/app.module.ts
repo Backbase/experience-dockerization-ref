@@ -10,21 +10,35 @@ import { StoreModule } from '@ngrx/store';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { bundlesDefinition } from './bundle-definitions';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FirstComponent, SecondComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     HttpClientModule,
-    RouterModule.forRoot([], { initialNavigation: 'disabled', useHash: false }),
+    RouterModule.forRoot(
+      [
+        {
+          path: '',
+          component: FirstComponent,
+          pathMatch: 'full',
+        },
+        { path: 'first-component', component: FirstComponent },
+        { path: 'second-component', component: SecondComponent },
+        { path: '**', redirectTo: '', pathMatch: 'full' },
+      ],
+      { initialNavigation: 'disabled', useHash: false },
+    ),
     WebSdkModule.forRoot({ ...environment, staticResourcesRoot: '' }),
     BackbaseCoreModule.forRoot({
       lazyModules: bundlesDefinition,
     }),
   ],
-  providers: [...(environment.mockProviders || []), { provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
