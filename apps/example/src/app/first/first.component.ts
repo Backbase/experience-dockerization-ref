@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'bb-first',
@@ -7,14 +7,5 @@ import { Component, OnInit } from '@angular/core';
       first works!
     </p>
   `,
-  styles: [
-  ]
 })
-export class FirstComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class FirstComponent {}

@@ -38,10 +38,7 @@ import { SecondComponent } from './second/second.component';
       lazyModules: bundlesDefinition,
     }),
   ],
-  providers: [
-    ...(environment.mockProviders || []),
-    // { provide: APP_BASE_HREF, useValue: '/' }
-  ],
+  providers: [...(environment.mockProviders || [])],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

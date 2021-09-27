@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'bb-second',
@@ -7,14 +7,5 @@ import { Component, OnInit } from '@angular/core';
       second works!
     </p>
   `,
-  styles: [
-  ]
 })
-export class SecondComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class SecondComponent {}
