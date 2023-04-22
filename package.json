@@ -47,7 +47,7 @@
     "@angular/language-service": "~11.1.0",
     "@bb-cli/bb": "^3.0.2",
     "@bb-cli/bb-ang": "~5.0.0-rc.0",
-    "@bb-cli/schematics": "5.0.1",
+    "@bb-cli/schematics": "5.4.3",
     "@microsoft/api-extractor": "7.12.1",
     "@types/jasmine": "^3.5.0",
     "@types/jasminewd2": "^2.0.6",
